@@ -11,6 +11,7 @@
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-burger-menu": "^2.0.3",
+    "vue-cool-lightbox": "^1.0.13",
     "vue-router": "^3.1.5"
   },
   "devDependencies": {

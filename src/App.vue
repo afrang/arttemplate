@@ -3,7 +3,7 @@
     <Slide right >
       <div class="p-0">
         <ul class="list-group" style="margin-top: -30px; ">
-          <li v-for="(item,index) in menu" :key="index" class="menuitem list-group-item"
+          <li v-for="(item,index) in menu" :key="index" class="menuitem "
               style="line-height: 10px;text-align: right;"   >
             <div @mouseover="master=item.image"   >
               <a :href="item.url" >

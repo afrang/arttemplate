@@ -32,7 +32,8 @@
         color: #666666;
         text-decoration: none;
         font-family: Parastoo;
-        font-size: 14px;
+        font-size: 12px;
+
 
     }
     .mymenus{

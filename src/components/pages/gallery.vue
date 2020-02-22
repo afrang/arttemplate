@@ -1,26 +1,33 @@
 <template>
     <div>
 
-        <div class="p-4">
+        <div class="">
+            <CoolLightBox
+                    :items="itemshow"
+                    :index="index"
+                    :slideshow="false"
+                    :loop="false"
+                    @close="index = null">
+            </CoolLightBox>
             <Menus></Menus>
-            <div class="text-center titletext">هنرمندان </div>
+            <div class="myback"></div>
+            <div class="text-center titletext" style="">هنرمندان </div>
 
             <div id="myBtnContainer" dir="rtl">
-                <button class="btn active" > نمایش همه</button>
-                <button v-for="(item,index) in group" :key="index" class="btn" v-text="item.name"> </button>
+                <button @click="filtered(null)" class="btn active" > نمایش همه</button>
+                <button v-for="(item,index) in group" :key="index" @click="filtered(item.id)" class="btn" v-text="item.name"> </button>
 
                 <div class="container">
                     <hr style="border: dashed 1px #999; margin-top: 20px; width: 50%;">
-                 <div class="row">
+                 <div class="card-columns">
+                     <div v-for="(item,index) in itemshow" @click="setIndex(index)"         :key="index" class=" card  mydiv">
+                         <img class="card-img-top  w-100" style="width: 100%;"  :src="item.src" :alt="item.name">
 
-                     <div v-for="(item,index) in art" :key="index" class=" col-4 ">
-                         <div class="mydiv m-5 mt-3">
-                             <img class="card-img-top  w-100" style="width: 100%;"  :src="item.url" :alt="item.name">
-                             <div class="card-body">
-                                 <p class="card-text">
-                                     <span v-text="item.name"></span>
-                                 </p>
-                             </div>
+                         <div class="card-body">
+                             <h5 class="card-title text-right" v-text="item.name"></h5>
+
+                             <footer class="blockquote-footer text-right"> <cite title="Source Title"  v-text="item.description"></cite></footer>
+
                          </div>
 
                      </div>
@@ -38,68 +45,77 @@
 
 <script>
     import menus from "./menus";
+    import CoolLightBox from 'vue-cool-lightbox'
+
     export default {
         name: "gallery",
         components: {
-            Menus:menus
+            Menus:menus,
+            CoolLightBox
         },
 
           data(){
               return {
+                  index: null,
                   group:{
                        0:{
+                           id:1,
                             name:'آرت دکو'
                         },
                       1:{
+                           id:2,
                           name:'سورئال'
                       },
                       2:{
+                           id:3,
                           name:'کلاسیک'
                       },
                       3:{
+                           id:4,
                           name:'پست مدرنیسم'
                       },
                   },
+                  filteruse:null,
                   art:{
                       0:{
                           name:'طرح 1',
-                          url:'/media/student/01.jpg',
+                          src:'/media/student/01.jpg',
                           description:'متن طرح 1',
                           group:1
                       },
                       1:{
                           name:'طرح 1',
-                          url:'/media/student/02.jpg',
+                          src:'/media/student/02.jpg',
                           description:'متن طرح 31',
                           group:2
                       },
                       2:{
                           name:'طرح 1',
-                          url:'/media/student/03.jpg',
+                          src:'/media/student/03.jpg',
                           description:'متن طرح 31',
                           group:2
                       },
                       4:{
                           name:'طرح 1',
-                          url:'/media/student/03.jpg',
+                          src:'/media/student/03.jpg',
                           description:'متن طرح 31',
                           group:2
                       },
                       5:{
                           name:'طرح 1',
-                          url:'/media/student/01.jpg',
+                          src:'/media/student/01.jpg',
                           description:'متن طرح 1',
                           group:1
                       },
                       6:{
                           name:'طرح 1',
-                          url:'/media/student/02.jpg',
+                          src:'/media/student/02.jpg',
                           description:'متن طرح 31',
                           group:2
                       },
                       7:{
                           name:'طرح 1',
-                          url:'/media/student/03.jpg',
+                          src:'/media/student/03.jpg',
                           description:'متن طرح 31',
                           group:2
                       },
@@ -107,9 +123,34 @@
 
               }
           } ,
+        computed:{
+            itemshow:function () {
+                let that=this;
+                let b=[];
+                if(this.filteruse==null){
+
+                    return  this.art;
+                }else {
+                    for(let item in this.art){
+                        if(this.art[item].group==that.filteruse){
+                            b.push(this.art[item]);
+
+                        }
+                    }
+                    return b;
+                }
+
+            }
+
+        },
 
         methods: {
-
+            setIndex(index) {
+                this.index = index
+            },
+            filtered(item){
+                this.filteruse=item;
+            }
 
             // Show filtered elements
         }
@@ -117,6 +158,13 @@
 </script>
 
 <style scoped>
+    .myback{
+              background-image: url("/media/student/03.jpg");
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 .mydiv{
     border-radius: 20px;
     overflow: hidden;
@@ -220,6 +268,8 @@
         font-size: 30px;
         color: #666666;
         width: 100%;
+
+        margin-top: -200px; margin-bottom: 200px; color:#fff;font-size: 48px;
     }
     #myBtnContainer{
         text-align: center;

@@ -18,6 +18,7 @@
 
     </Slide>
     <router-view></router-view>
+
   </div>
 </template>
 
@@ -116,5 +117,15 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #cdcdc9;
+    color: #333;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
   }
 </style>

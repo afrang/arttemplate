@@ -11,14 +11,18 @@
             </CoolLightBox>
             <Menus></Menus>
             <div class="myback"></div>
-            <div class="text-center titletext" style="">هنرمندان </div>
+            <div class="text-center titletext" style="">کارگاه </div>
 
             <div id="myBtnContainer" dir="rtl">
+<!--
                 <button @click="filtered(null)" class="btn active" > نمایش همه</button>
                 <button v-for="(item,index) in group" :key="index" @click="filtered(item.id)" class="btn" v-text="item.name"> </button>
+-->
 
                 <div class="container">
+<!--
                     <hr style="border: dashed 1px #999; margin-top: 20px; width: 50%;">
+-->
                  <div class="card-columns">
                      <div v-for="(item,index) in itemshow" @click="setIndex(index)"         :key="index" class=" card  mydiv">
                          <div class="img-hover-zoom">
@@ -28,7 +32,18 @@
                          <div class="card-body">
                              <h5 class="card-title text-right" v-text="item.name"></h5>
 
-                             <footer class="blockquote-footer text-right"> <cite title="Source Title"  v-text="item.description"></cite></footer>
+                             <footer class="blockquote-footer text-right">
+                                 <div title="Source Title"  >
+                                     <ul>
+                                         <li> <span>  <strong>نام دوره :</strong>    <span v-text="item.description"></span> </span></li>
+                                         <li>     <span>  <strong>تاریخ:</strong>    <span v-text="item.description"></span> </span></li>
+                                         <li>     <span>  <strong>زمان دوره:</strong>  3 روز </span></li>
+                                     </ul>
+
+
+
+                                 </div>
+                             </footer>
 
                          </div>
 
@@ -80,47 +95,14 @@
                   filteruse:null,
                   art:{
                       0:{
-                          name:'طرح 1',
+                          name:'کارگاه نقاشی ',
                           src:'/media/student/01.jpg',
                           description:'متن طرح 1',
+                          start:'1399/01/15',
+                          comment:'dsd',
                           group:1
                       },
-                      1:{
-                          name:'طرح 1',
-                          src:'/media/student/02.jpg',
-                          description:'متن طرح 31',
-                          group:2
-                      },
-                      2:{
-                          name:'طرح 1',
-                          src:'/media/student/03.jpg',
-                          description:'متن طرح 31',
-                          group:2
-                      },
-                      4:{
-                          name:'طرح 1',
-                          src:'/media/student/03.jpg',
-                          description:'متن طرح 31',
-                          group:2
-                      },
-                      5:{
-                          name:'طرح 1',
-                          src:'/media/student/01.jpg',
-                          description:'متن طرح 1',
-                          group:1
-                      },
-                      6:{
-                          name:'طرح 1',
-                          src:'/media/student/02.jpg',
-                          description:'متن طرح 31',
-                          group:2
-                      },
-                      7:{
-                          name:'طرح 1',
-                          src:'/media/student/03.jpg',
-                          description:'متن طرح 31',
-                          group:2
-                      },
+
                   }
 
               }
@@ -161,7 +143,7 @@
 
 <style scoped>
     .myback{
-              background-image: url("/media/student/03.jpg");
+              background-image: url("/media/student/04.jpg");
         width: 100%;
         height: 400px;
         background-size: cover;

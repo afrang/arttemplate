@@ -59,7 +59,7 @@
 }
 .mymenu ul li{
     margin: 0px;
-    line-height: 10px;
+    line-height: 0px;
     padding-right: 10px;
 }
 #bg {

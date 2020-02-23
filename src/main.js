@@ -3,6 +3,9 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import firstpage from "./components/pages/firstpage";
 import gallery from "./components/pages/gallery";
+import workshop from "./components/pages/workshop";
+import about from "./components/pages/about";
+import register from "./components/pages/register";
 import CoolLightBox from 'vue-cool-lightbox';
 
 require('bootstrap');
@@ -25,7 +28,20 @@ const router=new  VueRouter({
       name:'',
       component:gallery
     },
-
+    {
+      path:'/workshop',
+      name:'',
+      component:workshop
+    },
+    {
+      path:'/about',
+      name:'',
+      component:about
+    }, {
+      path:'/register',
+      name:'',
+      component:register
+    },
   ]
 })
 

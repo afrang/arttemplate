@@ -1,19 +1,6 @@
 <template>
     <div class="myfont">
         <Menus></Menus>
-        <div class="p-5">
-            <h4 class="abouttext">درباره ما</h4>
-            <p class="aboutexter">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
-        </div>
-        <div class="container">
-            <div style="text-align: center; ">
-            <div class="mybackf">
-
-            </div>
-
-
-            </div>
-        </div>
         <div class="textaboutbox">
             <div class="container">
                 <div class="row mt-5">
@@ -36,6 +23,51 @@
             </div>
         </div>
 
+        <div class="p-5 text-right" dir="rtl ">
+            <h4 class="abouttext">تماس با ما </h4>
+            <p class="aboutexter text-right" dir="rtl">
+                <strong>
+                    <span class="fa icofont-location-pin"></span>
+                    <span>آدرس: </span>
+                </strong>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+            <p>
+        </p>
+
+        </div>
+        <div class="container">
+            <div style="text-align: center; ">
+
+                <div class="  text-left  text-dark p-4 container-fluid  " dir="rtl">
+                    <ul class="list-inline text-center ">
+                        <a class="btn btn-social-icon ">
+                            <span class="icofont-twitter"></span>
+                        </a>
+                        <a class="btn btn-social-icon ">
+                            <span class="icofont-facebook"></span>
+                        </a>
+                        <a class="btn btn-social-icon ">
+                            <span class="icofont-instagram"></span>
+                        </a>
+                        <a class="btn btn-social-icon ">
+                            <span class="icofont-telegram"></span>
+                        </a>
+                    </ul>
+
+                    <hr>
+                    <div class="container container-fluid row text-center">
+                        <div class="col-sm-4"> <span class="icofont-phone"></span> : +98(21)000000000 </div>
+                        <div class="col-sm-4"><span class="icofont-mobile-phone"></span> : +98(912)000000000 </div>
+                        <div class="col-sm-4"><span class="icofont-phone-circle"></span> : +98(912)000000000 </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
 
     </div>
 </template>
@@ -52,6 +84,12 @@
 </script>
 
 <style scoped>
+    .btn-social-icon{
+        border: dashed 1px #888;
+        margin: 1px;
+        padding: 3px;
+        width: 40px;
+    }
     .blockquote p {
         font-family: Parastoo;
         position: relative; /* for pseudos */

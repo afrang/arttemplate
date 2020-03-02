@@ -6,24 +6,102 @@
         <br>
         <div class="container">
             <form dir="rtl" >
-                <div class="p-3">
-                    <input type="text" class="form-control w-40 m-1 d-inline"  placeholder="نام *">
-                    <input type="text" class="form-control w-40 m-1 d-inline"  placeholder="نام خانوادگی *">
-                    <input type="text" class="form-control w-40 m-1 d-inline"  placeholder="شماره همراه *">
-                    <input type="text" class="form-control w-40 m-1 d-inline"  placeholder="ایمیل *">
-                    <input type="text" class="form-control w-40 m-1 d-inline"  placeholder="شماره ثابت *">
-                    <select type="text" class="form-control w-40 m-1 d-inline"  placeholder="شماره ثابت *">
-                        <option  disabled>کلاس خود را انتخاب نمایید</option>
-                        <option >کلاس شماره 1</option>
-                        <option >کلاس شماره 1</option>
-                        <option >کلاس شماره 1</option>
-                        <option >کلاس شماره 1</option>
-                    </select>
+                <div class="p-3 row" dir="rtl">
+                    <div class="col-sm-4 col-xs-12">
+                        <input type="text" class="form-control  m-1 d-inline"  placeholder="نام *">
 
-                    <textarea class="form-control m-1 mt-5 w-80"></textarea>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <input type="text" class="form-control   m-1 d-inline"  placeholder="نام خانوادگی *">
+
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <input type="text" class="form-control  m-1 d-inline"  placeholder="شماره همراه *">
+
+                    </div>
+
+
+                    <div class="col-sm-12 col-xs-12">
+                        <textarea class="form-control m-1 mt-1 "></textarea>
+
+                    </div>
+                    <div class="col-sm-12 col-xs-12 bg-transparent border-info text-right ">
+                        <div class="container">
+                            <h4 class="text-white mt-4">پنج اثر خود را ارسال نمایید</h4>
+                            <hr>
+                            <table class="table table-light">
+                                <thead>
+                                <td>#</td>
+                                <td>رزومه</td>
+                                <td>آپلود فایل</td>
+                                <td>دانلود</td>
+                                </thead>
+                                <tr>
+                                    <td>1</td>
+                                    <td><input class="form-control"></td>
+                                    <td><input class="form-control" type="file"></td>
+                                    <td  class="text-center"><span class="icofont-download btn btn-dark"></span> </td>
+                                </tr>
+                                <thead>
+                                        <td>#</td>
+                                        <td>نام اثر</td>
+                                        <td>آپلود فایل</td>
+                                        <td>نمایش</td>
+                                </thead>
+                                <tr>
+                                    <td>1</td>
+                                    <td><input class="form-control"></td>
+                                    <td><input class="form-control" type="file"></td>
+                                    <td  class="text-center"><span class="icofont-eye btn btn-dark"></span> </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><input class="form-control"></td>
+                                    <td><input class="form-control" type="file"></td>
+                                    <td  class="text-center"><span class="icofont-eye btn btn-dark"></span> </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><input class="form-control"></td>
+                                    <td><input class="form-control" type="file"></td>
+                                    <td  class="text-center"><span class="icofont-eye btn btn-dark"></span> </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><input class="form-control"></td>
+                                    <td><input class="form-control" type="file"></td>
+                                    <td  class="text-center"><span class="icofont-eye btn btn-dark"></span> </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><input class="form-control"></td>
+                                    <td><input class="form-control" type="file"></td>
+                                    <td  class="text-center"><span class="icofont-eye btn btn-dark"></span> </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><input class="form-control"></td>
+                                    <td><input class="form-control" type="file"></td>
+                                    <td  class="text-center"><span class="icofont-eye btn btn-dark"></span> </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><input class="form-control"></td>
+                                    <td><input class="form-control" type="file"></td>
+                                    <td  class="text-center"><span class="icofont-eye btn btn-dark"></span> </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><input class="form-control"></td>
+                                    <td><input class="form-control" type="file"></td>
+                                    <td  class="text-center"><span class="icofont-eye btn btn-dark"></span> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                     <hr>
-                    <div class="text-center">
-                        <input type="button" class="btn btn-secondary align-content-center" value="ارسال">
+                    <div class="text-center col-sm-12 mt-3">
+                        <input type="button" class="btn btn-success align-content-center" value="ارسال">
 
                     </div>
 
@@ -44,9 +122,11 @@
 </script>
 
 <style  lang="scss" scoped>
+
     .registerpage{
+        height: 140%;
         background-image:
-                linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.41) 100%),
+                linear-gradient(0deg, rgb(119, 119, 116) 0%, rgba(21, 21, 21, 0.41) 100%),
                 url("/media/student/1536498231vb-108.jpg");
         background-size: 400px auto;;
     }
@@ -79,10 +159,10 @@
         line-height: 120%;
         position: relative;
         font-family: Parastoo;
-        width: 300px;
-        margin: 6% auto;
+        width: 40%;
+        margin: 2% auto;
         text-align: right;
-        color: #666666;
+        color: #fff;
 
         &:before {
             content: '\201C';

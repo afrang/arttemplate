@@ -43,13 +43,7 @@ export default {
           image:'/media/01.jpg',
           color:'green'
         },
-        1:{
-          name:'درباره ما',
-          description:'موسسه لوتوس، سفیر صلح',
-          url:'/about',
-          image:'/media/02.jpg',
-          color:'yellow'
-        },
+
         2:{
           name:'ورکشاپ ',
           description:'ورکشاپ های و نمایشگاه های خارجی',
@@ -103,6 +97,8 @@ export default {
 </script>
 
 <style>
+  @import "assets/icofont/icofont.min.css";
+
   body, html {
     height: 100%;
     margin: 0;

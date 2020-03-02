@@ -63,7 +63,6 @@
 <script>
     import menus from "./menus";
     import CoolLightBox from 'vue-cool-lightbox'
-
     export default {
         name: "gallery",
         components: {

@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="mm ">
+    <div class="mm">
+        <div >
             <ul class="mymenus">
                 <li v-for="(item,index) in $parent.$parent.menu" :key="index"><a :href="item.url" v-text="item.name+' '"></a></li>
 
@@ -22,6 +22,7 @@
         display: inline;
         list-style: none;
         margin-left: 20px;
+        padding-top: 40px;
 
 
     }
@@ -32,7 +33,13 @@
         color: #666666;
         text-decoration: none;
         font-family: Parastoo;
-        font-size: 12px;
+        font-size: 16px;
+
+
+
+    }
+    .mymenus li a:hover{
+            font-weight: bold;
 
 
     }
@@ -47,6 +54,7 @@
     .mm{
         width: 100%;
         text-align: center;
+        background-color: #fff;
 
         padding-top: 10px;
     }

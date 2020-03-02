@@ -4,8 +4,10 @@ import VueRouter from 'vue-router'
 import firstpage from "./components/pages/firstpage";
 import gallery from "./components/pages/gallery";
 import workshop from "./components/pages/workshop";
-import about from "./components/pages/about";
+import contactus from "./components/pages/contactus";
 import register from "./components/pages/register";
+import expo from "./components/pages/expo";
+import learning from "./components/pages/learning";
 import CoolLightBox from 'vue-cool-lightbox';
 
 require('bootstrap');
@@ -34,13 +36,24 @@ const router=new  VueRouter({
       component:workshop
     },
     {
-      path:'/about',
+      path:'/contactus',
       name:'',
-      component:about
-    }, {
+      component:contactus
+    },
+    {
+      path:'/expo',
+      name:'',
+      component:expo
+    },
+    {
       path:'/register',
       name:'',
       component:register
+    },
+    {
+      path:'/learning',
+      name:'',
+      component:learning
     },
   ]
 })
